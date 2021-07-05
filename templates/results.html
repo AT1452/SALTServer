@@ -1,0 +1,28 @@
+<script type="text/javascript" src="https://mpld3.github.io/js/d3.v3.min.js"></script>
+<script src="https://mpld3.github.io/js/mpld3.v0.2git.js"></script>
+<style>
+</style>
+<script type="text/javascript">
+  var svg = d3.select('body').select('svg')
+    .on('click', function(event) {
+      alert("yoyoyoyoyo")
+      let coords = d3.pointer(event);
+    });
+
+  fetch("../static/tester.json")
+  .then(response => response.json())
+  .then(json => {
+    console.log(json);
+    mpld3.draw_figure("colorGraph", json);
+  });
+
+</script>
+<div>
+  <div id="colorGraph" style = "display: inline-block;"></div>
+  <img style = "display: inline-block; height: 30vh; width: 30vh; vertical-align: top;" src="../static/color_wheel_hsl.jpg"/>
+  <!-- <video controls style = "display: inline-block;">
+    <source src="examples/source.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video> -->
+</div>
+
