@@ -1,1 +1,1 @@
-web: voila —-port=$PORT —-no-browser --enable_nbextensions=True ipympl.ipynb
+web: voila ipympl.ipynb —-port=$PORT —-no-browser --enable_nbextensions=True
